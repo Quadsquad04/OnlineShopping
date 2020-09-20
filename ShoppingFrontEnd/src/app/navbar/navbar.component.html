@@ -1,0 +1,50 @@
+<nav>
+    <div class="logo">CodingNepal</div>
+<label for="btn" class="icon">
+      <span class="fa fa-bars"></span>
+    </label>
+    <input type="checkbox" id="btn">
+    <ul>
+<li><a href="#">Home</a></li>
+<li>
+        <label for="btn-1" class="show">Products +</label>
+        <a href="#">Products</a>
+        <input type="checkbox" id="btn-1">
+        <ul>
+<li><a href="#">Pages</a></li>
+<li><a href="#">Elements</a></li>
+<li><a href="#">Icon</a>
+</li>
+</ul>
+</li>
+
+
+<li>
+        <label for="btn-3" class="show">Categories +</label>
+        <a href="#">Categories</a>
+        <input type="checkbox" id="btn-3">
+        <ul>
+<li><a href="#">Web Design</a></li>
+<li><a href="#">App Design</a></li>
+</ul>
+</li>
+
+<li>
+        <label for="btn-4" class="show">Login/Signup +</label>
+        <a href="#">Login/Signup</a>
+        <input type="checkbox" id="btn-4">
+        <ul>
+<li><a href="#">User </a></li>
+<li><a href="#">Retailer </a></li>
+</ul>
+</li>
+
+<li><a href="#">Wishlist</a></li>
+<li><a href="#">Cart</a></li>
+</ul>
+</nav>
+<script>
+    $('.icon').click(function(){
+      $('span').toggleClass("cancel");
+    });
+  </script>
