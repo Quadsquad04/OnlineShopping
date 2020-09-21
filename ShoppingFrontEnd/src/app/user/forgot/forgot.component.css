@@ -53,7 +53,7 @@ align-content: center;
 
 .card{
 height: 410px;
-margin-top: auto;
+margin-top: 50px;
 margin-bottom: auto;
 width: 400px;
 background-color: rgba(0,0,0,0.5) !important;
