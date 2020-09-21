@@ -11,6 +11,10 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { LoginComponent } from './user/login/login.component';
 import { RegisterComponent } from './user/register/register.component';
 import { ForgotComponent } from './user/forgot/forgot.component';
+import { CartComponent } from './cart/cart.component';
+import { FooterComponent } from './footer/footer.component';
+import { WishlistComponent } from './wishlist/wishlist.component';
+import { CarouselComponent } from './carousel/carousel.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +22,11 @@ import { ForgotComponent } from './user/forgot/forgot.component';
     NavbarComponent,
     LoginComponent,
     RegisterComponent,
-    ForgotComponent
+    ForgotComponent,
+    CartComponent,
+    FooterComponent,
+    WishlistComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,

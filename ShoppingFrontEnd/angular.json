@@ -24,10 +24,27 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.css"
+              
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/assets/styles/magnific-popup.css",
+              "src/assets/styles/elegant-icons.css",
+              "src/assets/styles/owl.carousel.min.css",
+              "src/assets/styles/font-awesome.min.css",
+              "src/assets/styles/nice-select.css",
+              "src/assets/styles/slicknav.min.css",
+              "src/assets/styles/style.css"
+
             ],
             "scripts": [
+              "src/assets/js/jquery-3.3.1.min.js", 
+              "src/assets/js/jquery.nicescroll.min.js",
+              "src/assets/js/jquery.magnific-popup.min.js",
+              "src/assets/js/jquery.countdown.min.js",
+              "src/assets/js/jquery.slicknav.js",
+              "src/assets/js/mixitup.min.js",
+              "src/assets/js/jquery.nice-select.min.js",
+              "src/assets/js/owl.carousel.min.js",
+              "src/assets/js/main.js",
               "node_modules/bootstrap/dist/js/bootstrap.min.js"
             ]
           },
