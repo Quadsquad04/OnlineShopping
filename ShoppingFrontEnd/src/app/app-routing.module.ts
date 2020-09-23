@@ -9,7 +9,6 @@ import {SignupComponent} from './retailer/signup/signup.component';
 import { CartComponent } from './cart/cart.component';
 import { WishlistComponent } from './wishlist/wishlist.component';
 import { CarouselComponent } from './carousel/carousel.component';
-import { from } from 'rxjs';
 
 const routes: Routes = [
    { path: 'login',component:LoginComponent },
