@@ -1,11 +1,11 @@
 <nav>
-    <div class="logo">CodingNepal</div>
+    <div class="logo">Zephyr</div>
 <label for="btn" class="icon">
       <span class="fa fa-bars"></span>
     </label>
     <input type="checkbox" id="btn">
     <ul>
-<li><a href="#">Home</a></li>
+<li><a href="#" [routerLink]="['carousel']">Home</a></li>
 <li>
         <label for="btn-1" class="show">Products +</label>
         <a href="#">Products</a>
@@ -41,9 +41,10 @@
 </ul>
 </li>
 
-<li><a href="#">Wishlist</a></li>
-<li><a href="#">Cart</a></li>
+<li><a href="#" [routerLink]="['wishlist']" >Wishlist</a></li>
+<li><a href="#" [routerLink]="['cart']" >Cart</a></li>
 </ul>
+
 </nav>
 <script>
     $('.icon').click(function(){
