@@ -36,7 +36,7 @@
 
             ],
             "scripts": [
-              "src/assets/js/jquery-3.3.1.min.js", 
+              "src/assets/js/jquery-3.3.1.min.js",
               "src/assets/js/jquery.nicescroll.min.js",
               "src/assets/js/jquery.magnific-popup.min.js",
               "src/assets/js/jquery.countdown.min.js",
