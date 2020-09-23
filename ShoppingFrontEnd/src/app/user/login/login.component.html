@@ -18,24 +18,29 @@
 				<h3>Sign In</h3>
 			</div>
 			<div class="card-body">
-				<form>
+			<form #loginForm="ngForm" (ngSubmit)="login()">
+					<!--<form #loginForm="ngForm" (ngSubmit)="loginForm.valid && login()">-->
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-user"></i></span>
-						</div>
-						<input type="text" class="form-control" placeholder="Username">
+					</div>
+					<!--<input type="text"  class="form-control" [ngClass]= "{ 'is-invalid': loginForm.submitted && username.invalid }" placeholder="Username" id="username" name="username" #username="ngModel" [(ngModel)]="model.username" required/>-->
+			    	<input type="password" class="form-control"  [ngClass]= "{ 'is-invalid': username.touched && username.invalid }" placeholder="Username" id="username" name="username" #username="ngModel" [(ngModel)]="model.username" required/>
+					<span class="invalid-feedback">Username is required</span>
 					</div>
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-key"></i></span>
 						</div>
-						<input type="password" class="form-control" placeholder="Password">
+						<input type="password" class="form-control"  [ngClass]= "{ 'is-invalid': password.touched && password.invalid }" placeholder="Password" id="password" name="password" #password="ngModel" [(ngModel)]="model.password" required/>
+						<span class="invalid-feedback">Password is required</span>
 					</div>
 					<div class="row-align-items-center">
-						<input type="checkbox"> Remember Me
+						<input type="checkbox" id="remember" name="remember" #remember="ngModel" [(ngModel)]="model.remember"> Remember Me
 					</div>
 					<div class="form-group">
-						<input type="submit" value="Login" class="btn float-right login_btn">
+						<!--<input type="submit" value="Login" class="btn float-right login_btn" >-->
+					<input type="submit" value="Login" class="btn float-right login_btn" [disabled]="loginForm.invalid" >
 					</div>
 				</form>
 			</div>

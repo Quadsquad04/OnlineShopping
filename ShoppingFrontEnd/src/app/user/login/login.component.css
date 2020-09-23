@@ -52,7 +52,7 @@ align-content: center;
 }
 
 .card{
-height: 380px;
+height: 420px;
 margin-top: 50px;
 margin-bottom: auto;
 width: 400px;
@@ -63,6 +63,14 @@ background-color: rgba(0,0,0,0.5) !important;
 color: white;
 }
 
+.invalid-feedback {
+    display: none;
+    width: 100%;
+    margin-top: .25rem;
+    font-size: 80%;
+	color: darkred;
+	font: caption;
+}
 .input-group-prepend span{
 width: 50px;
 background-color: #FFC312;

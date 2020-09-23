@@ -59,6 +59,15 @@ width: 400px;
 background-color: rgba(0,0,0,0.5) !important;
 }
 
+.invalid-feedback {
+    display: none;
+    width: 100%;
+    margin-top: .25rem;
+    font-size: 80%;
+	color: darkred;
+	font: caption;
+}
+
 .card-header h3{
 color: white;
 }
