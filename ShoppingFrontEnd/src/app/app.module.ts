@@ -18,6 +18,7 @@ import { CarouselComponent } from './carousel/carousel.component';
 import { SigninComponent } from './retailer/signin/signin.component';
 import { SignupComponent } from './retailer/signup/signup.component';
 import { ForgetComponent } from './retailer/forget/forget.component';
+import { ProductsComponent } from './products/products.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { ForgetComponent } from './retailer/forget/forget.component';
     CarouselComponent,
     SigninComponent,
     SignupComponent,
-    ForgetComponent
+    ForgetComponent,
+    ProductsComponent
   ],
   imports: [
     BrowserModule,
