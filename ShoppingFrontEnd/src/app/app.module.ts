@@ -19,6 +19,7 @@ import { SigninComponent } from './retailer/signin/signin.component';
 import { SignupComponent } from './retailer/signup/signup.component';
 import { ForgetComponent } from './retailer/forget/forget.component';
 import { ProductsComponent } from './products/products.component';
+import { ProductdetailsComponent } from './productdetails/productdetails.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { ProductsComponent } from './products/products.component';
     SigninComponent,
     SignupComponent,
     ForgetComponent,
-    ProductsComponent
+    ProductsComponent,
+    ProductdetailsComponent
   ],
   imports: [
     BrowserModule,

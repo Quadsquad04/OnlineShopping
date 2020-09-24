@@ -9,15 +9,15 @@
     <div class="offcanvas__option">
         <div class="offcanvas__links">
             <a href="#">FAQs</a>
-            <a href="#">Sign in</a>
-            <a href="#" [routerLink]="['wishlist']"><img src="assets/img/icon/heart.png" alt=""></a>
-            <a href="#" [routerLink]="['cart']"><img src="assets/img/icon/cart.png" alt=""></a>
+            <a href="#" [routerLink]="['login']">Sign in</a>
         </div>
         
     </div>
     <div class="offcanvas__nav__option">
-        <a href="#" class="search-switch"><img src="assets/img/icon/search.png" alt=""></a>
-       
+        <!-- <a href="#" class="search-switch"><img src="assets/img/icon/search.png" alt=""></a> -->
+        
+        <a href="#" [routerLink]="['wishlist']"><img src="assets/img/icon/heart.png" alt=""></a>
+        <a href="#" [routerLink]="['cart']"><img src="assets/img/icon/cart.png" alt=""></a>
     </div>
     <div id="mobile-menu-wrap"></div>
     <div class="offcanvas__text">
@@ -42,9 +42,8 @@
                     <div class="header__top__right">
                         <div class="header__top__links">
                             <a href="#">FAQs</a>
-                            <a href="#" [routerLink]="['login']" >Sign in</a>
-                            <a href="#" [routerLink]="['wishlist']"><img src="assets/img/icon/heart.png" alt=""></a>
-                            <a href="#" [routerLink]="['cart']"><img src="assets/img/icon/cart.png" alt=""></a>                          
+                            <a href="#" [routerLink]="['login']">Sign in</a>
+                                                     
                         </div>
                         
                     </div>
@@ -78,12 +77,22 @@
                     </ul>
                 </nav>
             </div>
-            <div class="col-lg-2 col-md-3">
+            <div class="col-lg-3 col-md-3">              
                 <div class="header__nav__option">
+                    <!-- <div class="shop__sidebar__search">
+                        <form action="#">
+                            <input type="text" placeholder="Search...">
+                            <a href="#">
+                            <button type="submit"><span class="fa fa-search"></span></button>
+                            </a>
+                        </form>
+                    </div>
                     <input type="text" class="form-control mr-sm-3" placeholder="Search">
                     <a href="#" >  <img src="assets/img/icon/search.png"></a>
-                    <!-- <a href="#" [routerLink]="['wishlist']"><img src="assets/img/icon/heart.png" alt=""></a>
-                    <a href="#" [routerLink]="['cart']"><img src="assets/img/icon/cart.png" alt=""></a> -->
+                    -->
+                   
+                    <a href="#" [routerLink]="['wishlist']"><img src="assets/img/icon/heart.png" alt=""></a>
+                    <a href="#" [routerLink]="['cart']"><img src="assets/img/icon/cart.png" alt=""></a> 
                 </div>
             </div>
         </div>
