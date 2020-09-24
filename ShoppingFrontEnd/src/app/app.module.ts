@@ -15,6 +15,9 @@ import { CartComponent } from './cart/cart.component';
 import { FooterComponent } from './footer/footer.component';
 import { WishlistComponent } from './wishlist/wishlist.component';
 import { CarouselComponent } from './carousel/carousel.component';
+import { SigninComponent } from './retailer/signin/signin.component';
+import { SignupComponent } from './retailer/signup/signup.component';
+import { ForgetComponent } from './retailer/forget/forget.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import { CarouselComponent } from './carousel/carousel.component';
     CartComponent,
     FooterComponent,
     WishlistComponent,
-    CarouselComponent
+    CarouselComponent,
+    SigninComponent,
+    SignupComponent,
+    ForgetComponent
   ],
   imports: [
     BrowserModule,
