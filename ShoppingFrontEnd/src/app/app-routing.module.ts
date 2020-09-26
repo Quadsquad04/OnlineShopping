@@ -11,6 +11,10 @@ import { WishlistComponent } from './wishlist/wishlist.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { ProductsComponent } from './products/products.component';
 import { ProductdetailsComponent } from './productdetails/productdetails.component';
+import {AdminlogComponent} from './admin/adminlog/adminlog.component';
+import {AddprodComponent} from './admin/addprod/addprod.component';
+import {AddretailerComponent} from './admin/addretailer/addretailer.component';
+
 
 const routes: Routes = [
    { path: 'login',component:LoginComponent },
@@ -24,6 +28,9 @@ const routes: Routes = [
    {path: 'carousel',component:CarouselComponent},
    {path: 'products',component:ProductsComponent},
    {path: 'productdetails',component:ProductdetailsComponent},
+   { path: 'adminlog',component:AdminlogComponent },
+   { path: 'addprod',component:AddprodComponent },
+   { path: 'addretailer',component:AddretailerComponent },
 ];
 
 @NgModule({
