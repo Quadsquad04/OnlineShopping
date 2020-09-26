@@ -20,6 +20,9 @@ import { SignupComponent } from './retailer/signup/signup.component';
 import { ForgetComponent } from './retailer/forget/forget.component';
 import { ProductsComponent } from './products/products.component';
 import { ProductdetailsComponent } from './productdetails/productdetails.component';
+import { AdminlogComponent } from './admin/adminlog/adminlog.component';
+import { AddprodComponent } from './admin/addprod/addprod.component';
+import { AddretailerComponent } from './admin/addretailer/addretailer.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +39,10 @@ import { ProductdetailsComponent } from './productdetails/productdetails.compone
     SignupComponent,
     ForgetComponent,
     ProductsComponent,
-    ProductdetailsComponent
+    ProductdetailsComponent,
+    AdminlogComponent,
+    AddprodComponent,
+    AddretailerComponent
   ],
   imports: [
     BrowserModule,
