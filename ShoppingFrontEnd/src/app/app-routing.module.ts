@@ -9,6 +9,8 @@ import {SignupComponent} from './retailer/signup/signup.component';
 import { CartComponent } from './cart/cart.component';
 import { WishlistComponent } from './wishlist/wishlist.component';
 import { CarouselComponent } from './carousel/carousel.component';
+import { ProductsComponent } from './products/products.component';
+import { ProductdetailsComponent } from './productdetails/productdetails.component';
 
 const routes: Routes = [
    { path: 'login',component:LoginComponent },
@@ -19,7 +21,9 @@ const routes: Routes = [
    { path: 'forget',component:ForgetComponent },
    { path: 'cart',component:CartComponent},
    {path: 'wishlist',component:WishlistComponent},
-   {path: 'carousel',component:CarouselComponent}
+   {path: 'carousel',component:CarouselComponent},
+   {path: 'products',component:ProductsComponent},
+   {path: 'productdetails',component:ProductdetailsComponent},
 ];
 
 @NgModule({

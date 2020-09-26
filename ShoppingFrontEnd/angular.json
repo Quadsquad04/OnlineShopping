@@ -37,15 +37,16 @@
             ],
             "scripts": [
               "src/assets/js/jquery-3.3.1.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "src/assets/js/jquery.nice-select.min.js",
               "src/assets/js/jquery.nicescroll.min.js",
               "src/assets/js/jquery.magnific-popup.min.js",
               "src/assets/js/jquery.countdown.min.js",
               "src/assets/js/jquery.slicknav.js",
               "src/assets/js/mixitup.min.js",
-              "src/assets/js/jquery.nice-select.min.js",
               "src/assets/js/owl.carousel.min.js",
-              "src/assets/js/main.js",
-              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+              "src/assets/js/main.js"
+              
             ]
           },
           "configurations": {
