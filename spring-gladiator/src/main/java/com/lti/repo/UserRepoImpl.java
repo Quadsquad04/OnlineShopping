@@ -29,8 +29,4 @@ public class UserRepoImpl implements UserRepo{
 		return usr;
 	}
 
-	public List<User> fetchAll() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 }

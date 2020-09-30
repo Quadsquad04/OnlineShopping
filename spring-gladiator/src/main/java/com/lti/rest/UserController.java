@@ -15,7 +15,7 @@ public class UserController {
 	@Autowired
 	private UserRepo repo;
 	
-	@PostMapping(value="/add",consumes="application/json")
+	@PostMapping(value="/addUser",consumes="application/json")
 	public String addUser(@RequestBody User usr) {
 		repo.save(usr);
 		return "User added successfully";

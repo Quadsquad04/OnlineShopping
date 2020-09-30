@@ -11,6 +11,5 @@ public interface UserRepo {
 	
 	User fetch(int userid);
 	
-	List<User> fetchAll();
 
 }
