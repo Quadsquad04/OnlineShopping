@@ -77,14 +77,14 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
+                                <tr *ngFor="let prdct of list">
                                     <td class="product__cart__item">
                                         <div class="product__cart__item__pic">
-                                            <img src="assets/img/shopping-cart/cart-1.jpg" alt="">
+                                            <img src={{prdct.imageid}}  alt="" style="width:100px;height:100px;">
                                         </div>
                                         <div class="product__cart__item__text">
-                                            <h6>T-shirt Contrast Pocket</h6>
-                                            <h5>$98.49</h5>
+                                            <h6>{{prdct.name}}</h6>
+                                            <h5>₹{{prdct.price}}</h5>
                                         </div>
                                     </td>
                                     <td class="quantity__item">
@@ -94,76 +94,28 @@
                                             </div>
                                         </div>
                                     </td>
-                                    <td class="cart__price">$ 30.00</td>
-                                    <td class="cart__close"><i class="fa fa-close"></i></td>
+                                    <td class="cart__price">₹{{prdct.price}}</td>
+                                    <td class="cart__close">
+                                        <button type="button" class="btn btn-default btn-sm">
+                                        <i (click)="RemoveProductfromCart(prdct.productId)" class="fa fa-close"></i>
+                                        </button>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="btn btn-default btn-sm">
+                                        <i (click)="checkout(prdct.productId)" class="fa fa-shopping-cart" style="font-size:36px"></i>
+                                        </button>
+                                    </td>
                                 </tr>
-                                <tr>
-                                    <td class="product__cart__item">
-                                        <div class="product__cart__item__pic">
-                                            <img src="assets/img/shopping-cart/cart-2.jpg" alt="">
-                                        </div>
-                                        <div class="product__cart__item__text">
-                                            <h6>Diagonal Textured Cap</h6>
-                                            <h5>$98.49</h5>
-                                        </div>
-                                    </td>
-                                    <td class="quantity__item">
-                                        <div class="quantity">
-                                            <div class="pro-qty-2">
-                                                <input type="text" value="1">
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="cart__price">$ 32.50</td>
-                                    <td class="cart__close"><i class="fa fa-close"></i></td>
-                                </tr>
-                                <tr>
-                                    <td class="product__cart__item">
-                                        <div class="product__cart__item__pic">
-                                            <img src="assets/img/shopping-cart/cart-3.jpg" alt="">
-                                        </div>
-                                        <div class="product__cart__item__text">
-                                            <h6>Basic Flowing Scarf</h6>
-                                            <h5>$98.49</h5>
-                                        </div>
-                                    </td>
-                                    <td class="quantity__item">
-                                        <div class="quantity">
-                                            <div class="pro-qty-2">
-                                                <input type="text" value="1">
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="cart__price">$ 47.00</td>
-                                    <td class="cart__close"><i class="fa fa-close"></i></td>
-                                </tr>
-                                <tr>
-                                    <td class="product__cart__item">
-                                        <div class="product__cart__item__pic">
-                                            <img src="assets/img/shopping-cart/cart-4.jpg" alt="">
-                                        </div>
-                                        <div class="product__cart__item__text">
-                                            <h6>Basic Flowing Scarf</h6>
-                                            <h5>$98.49</h5>
-                                        </div>
-                                    </td>
-                                    <td class="quantity__item">
-                                        <div class="quantity">
-                                            <div class="pro-qty-2">
-                                                <input type="text" value="1">
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="cart__price">$ 30.00</td>
-                                    <td class="cart__close"><i class="fa fa-close"></i></td>
-                                </tr>
+                                
+                               
+                                
                             </tbody>
                         </table>
                     </div>
                     <div class="row">
                         <div class="col-lg-6 col-md-6 col-sm-6">
                             <div class="continue__btn">
-                                <a href="#">Continue Shopping</a>
+                                <a href="#" [routerLink]="['/products']">Continue Shopping</a>
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6">
@@ -177,11 +129,14 @@
                     <div class="cart__total">
                         <h6>Cart total</h6>
                         <ul>
-                            <li>Subtotal <span>$ 169.50</span></li>
-                            <li>Total <span>$ 169.50</span></li>
+                            <li>Subtotal <span>₹ 169.50</span></li>
+                            <li>Total <span>₹ 169.50{{prdct.productId}}</span></li>
+
                         </ul>
-                        <a href="#" class="primary-btn">Proceed to checkout</a>
-                    </div>
+                        <button> 
+                        <a class="primary-btn">Proceed to checkout</a>
+                         </button>
+                    </div> 
                 </div>
             </div>
         </div>

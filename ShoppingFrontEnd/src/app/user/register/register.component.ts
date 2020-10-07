@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, PatternValidator} from '@angular/forms'
+import { Router } from '@angular/router';
+import { UserLoginService } from 'src/app/user-login.service';
+import { User } from 'src/app/user.model';
 
 /**
  * 
@@ -40,10 +43,11 @@ function symbolValidator(control) { //control = registerForm.get('password')
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit{
-   
+  usr = new User;
+  
   registerForm: FormGroup;
   
-  constructor(private builder: FormBuilder){}
+  constructor(private builder: FormBuilder,private service: UserLoginService, private router: Router){}
 
   ngOnInit() {
     this.buildForm()
@@ -61,8 +65,13 @@ export class RegisterComponent implements OnInit{
     })
   }
 
-  register() {
-    console.log(this.registerForm.value)
-  }
+  
+
+  register()
+  {
+    this.service.save(this.usr);
+    this.router.navigate(['/login']);
+  } 
+
 
 }

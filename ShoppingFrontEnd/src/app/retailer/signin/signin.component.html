@@ -18,21 +18,21 @@
 				<h3>Retailer Sign In</h3>
 			</div>
 			<div class="card-body">
-			<form #signinForm="ngForm" (ngSubmit)="signin()">
+			<form #signinForm="ngForm" (ngSubmit)='loggedIn()'>
 					<!--<form #loginForm="ngForm" (ngSubmit)="loginForm.valid && login()">-->
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-user"></i></span>
 					</div>
 					<!--<input type="text"  class="form-control" [ngClass]= "{ 'is-invalid': loginForm.submitted && username.invalid }" placeholder="Username" id="username" name="username" #username="ngModel" [(ngModel)]="model.username" required/>-->
-			    	<input type="text" class="form-control"  [ngClass]= "{ 'is-invalid': username.touched && username.invalid }" placeholder="Retailer name" id="username" name="username" #username="ngModel" [(ngModel)]="model.username" required/>
+			    	<input type="text" class="form-control"  [ngClass]= "{ 'is-invalid': username.touched && username.invalid }" placeholder="Retailer email" id="username" name="username" #username="ngModel" [(ngModel)]="retailer-login.email" required/>
 					<span class="invalid-feedback">Username is required</span>
 					</div>
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-key"></i></span>
 						</div>
-						<input type="password" class="form-control"  [ngClass]= "{ 'is-invalid': password.touched && password.invalid }" placeholder="Password" id="password" name="password" #password="ngModel" [(ngModel)]="model.password" required/>
+						<input type="password" class="form-control"  [ngClass]= "{ 'is-invalid': password.touched && password.invalid }" placeholder="Password" id="password" name="password" #password="ngModel" [(ngModel)]="retailer-login.password" required/>
 						<span class="invalid-feedback">Password is required</span>
 					</div>
 					<div class="row-align-items-center">
@@ -46,12 +46,12 @@
 			</div>
 			<div class="card-footer">
 			 <div class="d-flex-links">
-					Don't have an account?<a class ="card-links" [routerLink]="['/signup']" routerLinkActive="active">Register</a>
+					Don't have an account?<a class ="card-links" href="http://localhost:4200/signup">Register</a>
 				</div>
 				<div class="d-flex-links">
 					Forgot your password?<a class="card-links" [routerLink]="['/forget']">Reset</a>
 				</div>
-             </div>
+             </div>                                              
 		  </div>
   </div>
 </div>

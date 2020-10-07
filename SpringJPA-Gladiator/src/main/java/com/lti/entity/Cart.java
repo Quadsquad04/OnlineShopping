@@ -1,23 +1,52 @@
 package com.lti.entity;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
 @Table(name="carts")
 public class Cart {
 	
-	@Id
+    @Id
 	private int cartid;
 	
-	private int quantity;
 	@Column(length = 10)
+	private int quantity;
 	
+	@ManyToOne(cascade = {CascadeType.ALL}, fetch=FetchType.EAGER)
+	@JoinColumn(name="userid")
+	private User user;
+	
+	@ManyToOne(cascade = {CascadeType.ALL}, fetch=FetchType.EAGER)
+	@JoinColumn(name="productid")
+	private Product product;
+	
+	
+	public Product getProduct() {
+		return product;
+	}
+
+	public void setProduct(Product product) {
+		this.product = product;
+	}
+
 	public int getCartid() {
 		return cartid;
+	}
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
 	}
 
 	public void setCartid(int cartid) {

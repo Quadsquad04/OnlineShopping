@@ -6,7 +6,8 @@ import com.lti.entity.Product;
 
 public interface ProductRepo {
 	
-    void save(Product product);
+	
+    void save(Product product, int retailerid,int categoryid);
 	
 	Product fetch(int productid);
 	

@@ -15,4 +15,8 @@ public interface RetailerRepo {
 	void delete(int retailerid);
 	
 	void update(Retailer rtlr);
+
+	List find(Class<Retailer> class1, int i);
+	
+	
 }

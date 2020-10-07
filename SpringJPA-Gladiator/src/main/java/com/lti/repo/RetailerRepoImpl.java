@@ -48,4 +48,8 @@ public class RetailerRepoImpl implements RetailerRepo{
 		
 	}
 
+	public List find(Class<Retailer> class1, int i) {
+		return em.createQuery("from Retailer").getResultList();
+	}
+
 }

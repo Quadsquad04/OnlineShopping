@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AdminService } from '../admin.service';
+import { Product } from '../product.model';
 
 @Component({
   selector: 'app-productdetails',
@@ -7,9 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductdetailsComponent implements OnInit {
 
-  constructor() { }
+  list: Product[] = [];
+  
+  constructor(private router : Router, private service : AdminService) { }
 
   ngOnInit() {
+    this.service.getListProduct().subscribe(data => this.list = data);
   }
 
 }

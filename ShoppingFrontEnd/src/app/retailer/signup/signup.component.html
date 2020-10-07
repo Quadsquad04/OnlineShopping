@@ -20,14 +20,14 @@
                     <h3>Retailer Register</h3>
                 </div>
                 <div class="card-body">
-                    <form [formGroup]="signupForm" (ngSubmit)="signup()">
+                    <form [formGroup]="signupForm" (ngSubmit)="registerRetailer()">
 
                         <div class="input-group form-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-user"></i></span>
                             </div>
                             <input type="text" id="yourname" placeholder="Your Name"
-                            class="form-control"
+                            class="form-control"  [(ngModel)]="rtlr.retailername"
                             [ngClass]="{ 'is-invalid': signupForm.get('yourname').touched && signupForm.get('yourname').invalid }"
                             formControlName="yourname" required/>
                             <span class="invalid-feedback">
@@ -41,7 +41,7 @@
                                 <span class="input-group-text"><i class="fas fa-mobile-phone"></i></span>
                             </div>
                             <input type="tel" id="mobileno" placeholder="Mobile No"
-                            class="form-control"
+                            class="form-control"  [(ngModel)]="rtlr.mobile"
                             [ngClass]="{ 'is-invalid': signupForm.get('mobileno').touched && signupForm.get('mobileno').invalid }"
                             formControlName="mobileno">
                             <span class="invalid-feedback">
@@ -57,7 +57,7 @@
                             </div>   
                             <input type="email"  type="email" placeholder="Email Address"
                             id="email"
-                            class="form-control"
+                            class="form-control"  [(ngModel)]="rtlr.email"
                             [ngClass]="{ 'is-invalid': signupForm.get('email').touched && signupForm.get('email').invalid }"
                             formControlName="email" />
                             <span class="invalid-feedback">
@@ -72,8 +72,8 @@
                             </div>
                             <input type="password" type="password"
                             id="password" placeholder="Password"
-                            class="form-control"
-                            [ngClass]="{ 'is-invalid': signuprForm.get('password').touched && signupForm.get('password').invalid }"
+                            class="form-control" [(ngModel)]="rtlr.password"
+                            [ngClass]="{ 'is-invalid': signupForm.get('password').touched && signupForm.get('password').invalid }"
                             formControlName="password"/>
                             <span class="invalid-feedback">
                                 <span *ngIf="signupForm.get('password').hasError('required')">Password can't be blank.</span>

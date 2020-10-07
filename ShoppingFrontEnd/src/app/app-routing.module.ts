@@ -14,9 +14,24 @@ import { ProductdetailsComponent } from './productdetails/productdetails.compone
 import {AdminlogComponent} from './admin/adminlog/adminlog.component';
 import {AddprodComponent} from './admin/addprod/addprod.component';
 import {AddretailerComponent} from './admin/addretailer/addretailer.component';
-
+import {SidebarandaddComponent} from './retailer/profile/sidebarandadd/sidebarandadd.component';
+import {DisplayProductsComponent } from './retailer/profile/display-products/display-products.component';
+import {SearchproductComponent} from './searchproduct/searchproduct.component';
+import {UserdashboardComponent } from './user/userprofile/userdashboard/userdashboard.component';
+import {AboutusComponent} from './aboutus/aboutus.component';
+import {AddressComponent} from './address/address.component';
+import {PaymentComponent} from './payment/payment.component';
+import{EditproductComponent} from './retailer/profile/editproduct/editproduct.component';
 
 const routes: Routes = [
+  {path: '', component: CarouselComponent},
+  {path: 'editproduct',component:EditproductComponent},
+  {path: 'payment',component:PaymentComponent},
+  {path: 'address',component:AddressComponent},
+  { path: 'aboutus',component:AboutusComponent },
+  { path: 'searchProducts',component:SearchproductComponent },
+  { path: 'activeproducttable',component:DisplayProductsComponent },
+  { path: 'retailerprofile',component:SidebarandaddComponent },
    { path: 'login',component:LoginComponent },
    { path: 'register',component:RegisterComponent },
    { path: 'forgot',component:ForgotComponent },
@@ -31,6 +46,7 @@ const routes: Routes = [
    { path: 'adminlog',component:AdminlogComponent },
    { path: 'addprod',component:AddprodComponent },
    { path: 'addretailer',component:AddretailerComponent },
+   {path: 'userdashboard', component:UserdashboardComponent},
 ];
 
 @NgModule({

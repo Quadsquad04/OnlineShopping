@@ -30,7 +30,6 @@ public class TestCategory {
 	public void testFetchCategoryById() {
 		Category ctgry =  repo.fetch(60065);
 		System.out.println(ctgry.getCategoryid()+"\t"+ctgry.getCategoryname());
-
 		
 	}
 }

@@ -19,6 +19,9 @@
     </head>
 <body>
     
+    
+                  
+
     <div class="container">
         <div class="table-wrapper">
             <div class="table-title">
@@ -42,53 +45,21 @@
             <table class="table table-striped table-hover">
                 <thead>
                     <tr>
-                        <th>Retailer's Id</th>
+                        <th>R.Id</th>
                         <th>Retailer's Name</th>
-        
 						<th>Retailer's Email</th>
-						<th>Notification to Verify</th>						
-                        <th>Delete</th>					
+						<th>Mobile Number</th>						
+                        <th>Delete Retailer</th>					
 						
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td><a href="#" >1</a></td>
-                        <td>Nike.retail limited</td>
-                        <td>nikeindia@gmail.com</td>
-                        <td><input type="button" value="Verify" class/></td>    
+                    <tr *ngFor="let rtlr of list">
+                        <td><a href="#" >{{rtlr.retailerid}}</a></td>
+                        <td>{{rtlr.retailername}}</td>
+                        <td>{{rtlr.email}}</td>
+                        <td>{{rtlr.mobile}}</td>    
                         <td><input type="button" value="Delete" class/></td>                      
-						</tr>
-					<tr>
-                        <td><a href="#" >2</a></td>
-                        <td>Gucci pvt limited</td>
-			
-						<td>gucciindia@gmail.com</td>
-                        <td><input type="button" value="Verify" class/></td>                        
-						<td><input type="button" value="Delete" class/></td>
-					  </tr>
-					<tr>
-                        <td><a href="#" >3</a></td>
-                        <td>Fastrack pvt limited</td>
-                        <td>fastrackindia@gmail.com</td>
-                        <td><input type="button" value="Verify" class/></td>                        
-						<td><input type="button" value="Delete" class/></td>
-						 </tr>
-					<tr>
-                        <td><a href="#" >4</a></td>
-                        <td>Roadstar retail ltd</td>
-			
-						<td>roadstarindia@gmail.com</td>
-                        <td><input type="button" value="Verify" class/></td>                        
-						<td><input type="button" value="Delete" class/></td>
-                    </tr>
-					<tr>
-                        <td><a href="#" >5</a></td>
-                        <td>Ray-ban pvt ltd</td>
-			
-						<td>raybanindia@gmail.com</td>
-                        <td><input type="button" value="Verify" class/></td>                        
-						<td><input type="button" value="Delete" class/></td>
 						</tr>
                 </tbody>
             </table>
@@ -107,6 +78,15 @@
                 </ul>
             </div>
         </div>
-    </div>     
+         
+        <div>
+            <button type="submit" [routerLink]="['/addprod']"  class="btn btn-primary btn-lg float-right" style="width:10cm; text-align: center;">Show All Products</button> 
+        </div>
+        
+    </div> 
+
+    <br> 
+    
+   				
 </body>
 </html>

@@ -23,6 +23,14 @@ import { ProductdetailsComponent } from './productdetails/productdetails.compone
 import { AdminlogComponent } from './admin/adminlog/adminlog.component';
 import { AddprodComponent } from './admin/addprod/addprod.component';
 import { AddretailerComponent } from './admin/addretailer/addretailer.component';
+import { SidebarandaddComponent } from './retailer/profile/sidebarandadd/sidebarandadd.component';
+import { DisplayProductsComponent } from './retailer/profile/display-products/display-products.component';
+import { SearchproductComponent } from './searchproduct/searchproduct.component';
+import { UserdashboardComponent } from './user/userprofile/userdashboard/userdashboard.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
+import { PaymentComponent } from './payment/payment.component';
+import { AddressComponent } from './address/address.component';
+import { EditproductComponent } from './retailer/profile/editproduct/editproduct.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +50,15 @@ import { AddretailerComponent } from './admin/addretailer/addretailer.component'
     ProductdetailsComponent,
     AdminlogComponent,
     AddprodComponent,
-    AddretailerComponent
+    AddretailerComponent,
+    SidebarandaddComponent,
+    DisplayProductsComponent,
+    SearchproductComponent,
+    UserdashboardComponent,
+    AboutusComponent,
+    PaymentComponent,
+    AddressComponent,
+    EditproductComponent
   ],
   imports: [
     BrowserModule,

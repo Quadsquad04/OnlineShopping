@@ -9,6 +9,7 @@ import javax.transaction.Transactional.TxType;
 
 import org.springframework.stereotype.Repository;
 
+import com.lti.entity.Category;
 import com.lti.entity.Product;
 import com.lti.entity.Retailer;
 
@@ -20,7 +21,11 @@ public class ProductRepoImpl implements ProductRepo{
 	private EntityManager em;
 	
 	@Transactional(value=TxType.REQUIRED)
-	public void save(Product product) {
+	public void save(Product product,int retailerid,int categoryid) {
+		Retailer r= em.find(Retailer.class, retailerid);
+		Category c=em.find(Category.class, categoryid);
+		product.setCategory(c);
+		product.setRetailer(r);
 		em.persist(product);
 		
 	}

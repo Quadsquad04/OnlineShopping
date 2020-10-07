@@ -19,8 +19,8 @@ public class TestUser {
 	@Test
 	public void testSave() {
 		User usr = new User();
-		usr.setUserid(5001);
-		usr.setUsername("Anamika");
+		usr.setUserid(5005);
+		usr.setUsername("Arjana");
 		usr.setPassword("12345");
 		usr.setMobile("7042932246");
 		usr.setEmail("anamika@gmail.com");

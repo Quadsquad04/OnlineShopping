@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, PatternValidator} from '@angular/forms'
+import { Router } from '@angular/router';
+import { RetailerLoginService } from 'src/app/retailer-login.service';
+import { Retailer } from 'src/app/retailer.model';
 
 /**
  * 
@@ -40,17 +43,18 @@ function symbolValidator(control) { //control = registerForm.get('password')
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent implements OnInit {
+  rtlr = new Retailer;
 
-  registerForm: FormGroup;
+  signupForm: FormGroup;
   
-  constructor(private builder: FormBuilder){}
+  constructor(private builder: FormBuilder,private service: RetailerLoginService, private router: Router){}
 
   ngOnInit() {
     this.buildForm()
   }
 
   buildForm() {
-    this.registerForm = this.builder.group({
+    this.signupForm = this.builder.group({
       yourname: ['', [Validators.required,Validators.pattern('(([A-Z][a-z]*((\s[A-Za-z])?[a-z]*)*))')]],
       mobileno: ['', [Validators.required, Validators.pattern('([6789][0-9]{9})')]],
       email: ['', [Validators.required, Validators.email]],
@@ -62,7 +66,12 @@ export class SignupComponent implements OnInit {
   }
 
   register() {
-    console.log(this.registerForm.value)
+    console.log(this.signupForm.value)
   }
+  registerRetailer()
+  {
+    this.service.save(this.rtlr);
+    this.router.navigate(['/signin']);
+  } 
 
 }

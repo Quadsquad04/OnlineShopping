@@ -45,7 +45,6 @@
                         <th>R.Id</th>
                         <th>P.Id</th>
                         <th>  Image</th>
-        
 						<th>Name</th>
 						<th>Brand</th>						
                         <th>Price</th>					
@@ -53,50 +52,14 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td><a href="#" >1</a></td>
-                        <td>1</td>
-<td><a href="#"><img src="assets/img/product/product-1.jpg" height= "100px" width="100px" class="avatar" alt="Avatar"></a></td>
+                    <tr *ngFor="let prdct of list">
+                        <td><a href="#" >{{prdct.retailer.retailerid}}</a></td>
+                        <td>{{prdct.productid}}</td>
+<td><a href="#"><img src={{prdct.imageid}} height= "100px" width="100px" class="avatar" alt="Avatar"></a></td>
 			
-						<td>Sports Shoes</td>
-                        <td>Nike</td>                        
-						<td>2300</td>
-						</tr>
-					<tr>
-                        <td><a href="#" >7</a></td>
-                        <td>2</td>
-<td><a href="#"><img src="assets/img/product/product-2.jpg"  height= "100px" width="100px" class="avatar" alt="Avatar"></a></td>
-			
-                        <td>Jacket</td>                       
-						<td>Monte Carlo</td>
-						<td>3850</td>
-					  </tr>
-					<tr>
-                        <td><a href="#" >6</a></td>
-                        <td>3</td>
-                        <td><a href="#"><img src="assets/img/product/product-3.jpg" height= "100px" width="100px" class="avatar" alt="Avatar"></a></td>
-			
-                        <td>Canvas Shoes</td>
-                        <td>Converse</td>
-						<td>2350</td>
-						 </tr>
-					<tr>
-                        <td><a href="#" >2</a></td>
-                        <td>4</td>
-                        <td><a href="#"><img src="assets/img/product/product-10.jpg"  height= "100px" width="100px" class="avatar" alt="Avatar"></a></td>
-			
-                        <td>Perfume</td>
-                        <td>Gucci</td>						
-						<td>2799</td>
-                    </tr>
-					<tr>
-                        <td><a href="#" >8</a></td>
-                        <td>5</td>
-                        <td><a href="#"><img src="assets/img/product/product-11.jpg" height= "100px" width="100px" class="avatar" alt="Avatar"></a></td>
-						<td>Shoulder Bag</td>
-                        <td>Caprese</td>
-						<!--<td><span class="status text-success">&bull;</span> Delivered</td>-->
-						<td>1799</td>
+						<td>{{prdct.name}}</td>
+                        <td>{{prdct.brand}}</td>                        
+						<td>{{prdct.price}}</td>
 						</tr>
                 </tbody>
             </table>
