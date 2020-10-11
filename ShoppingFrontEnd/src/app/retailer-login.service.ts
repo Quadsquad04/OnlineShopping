@@ -47,6 +47,9 @@ export class RetailerLoginService {
    {
      this.router.navigate(['/editproduct'],{queryParams: {index: index}});
    }
+   deleteProduct(id:number) {
+    this.http.delete(this.baseUrl+"/delProduct/"+id).subscribe();
+    } 
 
  
 

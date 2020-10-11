@@ -18,5 +18,13 @@ export class AddretailerComponent implements OnInit {
     this.service.getList().subscribe(data => this.list = data);
   }
 
+  RemoveRetailer(retailerid:number)
+    {
+      //alert(this.usrid+"/t"+productId);
+      this.service.deleteRetailer(retailerid);
+      alert("Retailer Removed ");
+      window.location.href = 'http://localhost:4200/addretailer';
+    } 
+
 
 }

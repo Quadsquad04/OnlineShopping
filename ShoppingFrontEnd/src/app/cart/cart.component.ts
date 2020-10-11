@@ -17,7 +17,12 @@ export class CartComponent implements OnInit {
 
   ngOnInit() {
     this.usrid = parseInt(sessionStorage.getItem('uid'));
+    if(!this.usrid){
+      this.router.navigate(['/login']);
+      }
+      else{
     this.service.fetchCart(this.usrid).subscribe(data => this.list = data);
+      }
   }
 
   RemoveProductfromCart(productId:number)
@@ -35,4 +40,6 @@ export class CartComponent implements OnInit {
     this.router.navigate(['/address']);
    } 
 
+  
+  
 }

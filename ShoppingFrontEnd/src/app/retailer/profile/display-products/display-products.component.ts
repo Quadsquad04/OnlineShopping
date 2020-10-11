@@ -22,11 +22,14 @@ export class DisplayProductsComponent implements OnInit {
   }
 
   EditProduct(productId:number){
-    //alert("hello"+productId);
-    //localStorage.setItem("pid",String(productId));
-    //this.service.fetchProductForEdit(productId).subscribe(data => this.prdct = data);
     this.service.edit(productId);
-    //alert("hello"+productId);
   }
+
+  RemoveProduct(productId:number)
+    {
+      this.service.deleteProduct(productId);
+      alert("Product Removed ");
+      window.location.href = 'http://localhost:4200/activeproducttable';
+    } 
 
 }

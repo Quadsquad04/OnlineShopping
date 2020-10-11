@@ -21,7 +21,12 @@ export class WishlistComponent implements OnInit {
     ngOnInit() {
       
       this.usrid = parseInt(sessionStorage.getItem('uid'));
+      if(!this.usrid){
+        this.router.navigate(['/login']);
+        }
+        else{
       this.service.fetchWishlist(this.usrid).subscribe(data => this.list = data);
+        }
     }
 
     RemoveProductfromWishlist(productId:number)

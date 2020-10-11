@@ -34,7 +34,10 @@ export class AdminlogComponent implements OnInit {
     sessionStorage.setItem("umobile", this.user.mobile);
     sessionStorage.setItem("uemail", this.user.email);
     //this.router.navigate(['/addretailer']);
+    if(sessionStorage.getItem("uname")=="Admin"){
     window.location.href = 'http://localhost:4200/addretailer';
+    }
+    
   }
   model:any={}
   

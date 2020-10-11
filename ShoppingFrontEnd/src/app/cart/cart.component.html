@@ -5,10 +5,6 @@
 
 </head>
 <body>
-    <!-- Page Preloder -->
-    <!-- <div id="preloder">
-        <div class="loader"></div>
-    </div> -->
 
     <!-- Offcanvas Menu Begin -->
     <div class="offcanvas-menu-overlay"></div>
@@ -127,15 +123,8 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="cart__total">
-                        <h6>Cart total</h6>
-                        <ul>
-                            <li>Subtotal <span>₹ 169.50</span></li>
-                            <li>Total <span>₹ 169.50{{prdct.productId}}</span></li>
-
-                        </ul>
-                        <button> 
-                        <a class="primary-btn">Proceed to checkout</a>
-                         </button>
+                        
+                        <button type="submit" class="site-btn" [routerLink]="['/address']">PROCEED TO CHECKOUT</button>
                     </div> 
                 </div>
             </div>

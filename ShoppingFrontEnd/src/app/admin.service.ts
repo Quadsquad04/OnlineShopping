@@ -70,7 +70,11 @@ export class AdminService {
   addOrder(ordr : Order,id:number,id2:number) {
         this.http.post(this.baseUrl + "/addOrder/"+id+"/"+id2, ordr).subscribe(data => data = ordr);
         data => data = ordr;
-      }      
+      }
+  deleteRetailer(id:number) {
+        this.http.delete(this.baseUrl+"/delretailer/"+id).subscribe();
+        }  
+                
     
     
   

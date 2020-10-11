@@ -13,6 +13,7 @@ export class LoginComponent implements OnInit {
 
   login : Login;
   user: User;
+  uname:String;
 
   constructor(private service : UserLoginService, private router : Router){
     this.login = new Login();
@@ -27,9 +28,10 @@ export class LoginComponent implements OnInit {
     );
     sessionStorage.setItem("user", JSON.stringify(this.user));
     sessionStorage.setItem('uid', String(this.user.userid));
-    sessionStorage.setItem("uname", this.user.username)
+    sessionStorage.setItem("uname", this.user.username);
     sessionStorage.setItem("umobile", this.user.mobile);
     sessionStorage.setItem("uemail", this.user.email);
+    this.uname=sessionStorage.getItem("uname");
     //this.router.navigate(['/']);
     window.location.href = 'http://localhost:4200';
   }
