@@ -1,5 +1,7 @@
 package com.lti.rest;
 
+//made by  Sahil Gupta 
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,10 +47,11 @@ public class UserController {
 	public String addUser(@RequestBody User usr) {
 		service.addUser(usr);
 		SimpleMailMessage message = new SimpleMailMessage();
-		message.setFrom("yashwaryagupta24@gmail.com");
+		message.setFrom("Zephyr.com");
 		message.setTo(usr.getEmail());
-		message.setSubject("Thank You for registration");
-		message.setText("Thank you "+usr.getUsername()+" for registering on Zephyr.com Keep Exploring for more products");
+		message.setSubject("Thank You for Registerting at Zephyr.com");
+		message.setText("Hi "+usr.getUsername()+","+"\t"+
+		"\n Thank you for creating your account at Zephyr.com. Keep Exploring for more products \t\n To sign in to your account, please visit Zephyr.com \t\n If you have any queries regarding your account,click 'Reply' in your email and we'll be happy to help.");
 		mailSender.send(message);
 		return "User added successfully";
 	}
@@ -83,7 +86,7 @@ public class UserController {
 		Product prdct=em.find(Product.class, productid);
 		
 		SimpleMailMessage message = new SimpleMailMessage();
-		message.setFrom("yashwaryagupta24@gmail.com");
+		message.setFrom("Zephyr.com");
 		message.setTo(usr.getEmail());
 		System.out.println(usr.getEmail());
 		message.setSubject("Thank You for Placing Order");
@@ -91,7 +94,7 @@ public class UserController {
 		mailSender.send(message);
 		
 		SimpleMailMessage message1 = new SimpleMailMessage();
-		message1.setFrom("yashwaryagupta24@gmail.com");
+		message1.setFrom("Zephyr.com");
 		message1.setTo(prdct.getRetailer().getEmail());
 		System.out.println(prdct.getRetailer().getEmail());
 		message1.setSubject("Congratulations On getting new order");

@@ -1,5 +1,7 @@
 package com.lti.entity;
 
+//made by yashwarya gupta
+
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;

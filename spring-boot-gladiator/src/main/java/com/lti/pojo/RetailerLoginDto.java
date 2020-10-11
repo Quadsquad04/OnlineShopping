@@ -1,5 +1,6 @@
-//-------------maanged by bhavya-------------------------//
 package com.lti.pojo;
+
+//made by sahil gupta
 
 public class RetailerLoginDto {
 	private String email;

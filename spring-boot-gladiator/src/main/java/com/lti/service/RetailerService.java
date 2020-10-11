@@ -1,5 +1,7 @@
 package com.lti.service;
 
+//made by  Sahil Gupta 
+
 import java.util.List;
 
 import com.lti.entity.Retailer;
@@ -20,7 +22,6 @@ public interface RetailerService {
 	void removeRetailer(int retailerid);
 	
 	void updateRetailer(Retailer rtlr);
-	
 	
 	Retailer validate(RetailerLoginDto login);
 

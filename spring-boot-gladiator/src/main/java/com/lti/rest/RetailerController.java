@@ -1,5 +1,7 @@
 package com.lti.rest;
 
+//made by  Sahil Gupta 
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -38,10 +40,11 @@ public class RetailerController {
 	public String addRetailer(@RequestBody Retailer rtlr) {
 		service.addRetailer(rtlr);
 		SimpleMailMessage message = new SimpleMailMessage();
-		message.setFrom("yashwaryagupta24@gmail.com");
+		message.setFrom("Zephyr.com");
 		message.setTo(rtlr.getEmail());
-		message.setSubject("Thank You for registration");
-		message.setText("Thank you "+rtlr.getRetailername()+" for registering on Zephyr.com Keep Adding for more products");
+		message.setSubject("Thank You for registering at Zephyr.com");
+		message.setText("Hi "+rtlr.getRetailername()+","+"\t"+
+		"\n Thank you for creating your account at Zephyr.com. Keep Adding more products to increase the profit. \t\n To sign in to your account, please visit Zephyr.com \t\n If you have any queries regarding your account,click 'Reply' in your email and we'll be happy to help.");
 		mailSender.send(message);
 		return "Retailer added successfully";
 	}
